@@ -26,4 +26,5 @@ console.log(mySet)
 // su principal diferencia con los arrrays es que no admite duplicados
 
 mySet.add("nico");
+mySet.add("Nico")// con algun cambio minimo como mayuscula si lo guarda
 console.log(mySet)
