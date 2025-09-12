@@ -121,22 +121,35 @@ function arrayCuadra(arr) {
 }
 console.log(arrayCuadra(arrnum))
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
-let or = "nico maxi soria"
-function inversa (oracion) {
-    espacios = []
-    con=0;
-    for (caracter of oracion) {
-        con++
-        if(caracter == " ") {
-            espacios.unshift(con);
-        }
+let or = 'pajara   pintada en un hermoso color';
+function inversa(oracion) {
+  aux = [];
+  invertida = '';
+  conAux = 0;
+    if (oracion.includes(" ")) {
+        for(caracter of oracion) {
+            conAux++
+            if (caracter == " ") {
+                aux.unshift(conAux)
+            }}
+            indiceAux = oracion.length;
+            aux.forEach(indice => {
+                invertida = invertida + (oracion.slice(indice, indiceAux)) + " "
+                indiceAux = indice - 1;
+            })
+            invertida =  invertida + (oracion.slice(0, indiceAux))
+    } else {
+        invertida = oracion
     }
-    console.log(espacios)
-    let ora =""
-    for(i=oracion.length-1; i>=0; i--) {
-        if
-    }
-    return ora
+    
+  return invertida;
 }
-console.log(inversa(or))
+console.log(inversa(or));
 // 10. Crea una función que calcule el factorial de un número dado
+function factorial (num) {
+    for(i = num - 1; i > 0; i--) {
+        num = num * i
+    }
+    return num
+}
+console.log(factorial(14))
